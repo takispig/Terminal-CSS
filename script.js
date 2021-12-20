@@ -3,7 +3,7 @@ let inputId = 0;
 function executeCommand(command) {
     // Number 13 is the "Enter" key on the keyboard
     if (event.key == 'Enter') {
-        var answer = document.createElement("p");
+        let answer = document.createElement("p");
         switch (command) {
             case 'help':
                 answer.innerHTML =  "<b>'author'</b> returns author's name<br><b>'time'</b> returns the current time<br>"+
@@ -14,9 +14,9 @@ function executeCommand(command) {
                 answer.innerHTML = "Dimitrios Pigkas"
                 break;
             case 'time':
-                var today = new Date();
-                var date = today.getDate()+"/"+(today.getMonth()+1)+'/'+today.getFullYear();
-                var time = today.getHours() + ":" + today.getMinutes();
+                let today = new Date();
+                let date = today.getDate()+"/"+(today.getMonth()+1)+'/'+today.getFullYear();
+                let time = today.getHours() + ":" + today.getMinutes();
                 answer.innerHTML = date + "\t" + time;
                 break;
             case 'github':
@@ -25,7 +25,7 @@ function executeCommand(command) {
             case 'clear':
                 clear();
                 document.getElementById("input-").focus();
-                exit(); // exit, otherwise a newline will be created (avoid 2 inputs)
+                return; // exit, otherwise a newline will be created (avoid 2 inputs)
             default:
                 answer.innerHTML = "Unknown command. I am just a dummy box :)"
         }
