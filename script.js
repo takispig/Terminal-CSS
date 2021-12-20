@@ -6,7 +6,8 @@ function executeCommand(command) {
         var answer = document.createElement("p");
         switch (command) {
             case 'help':
-                answer.innerHTML = "<b>'author'</b> returns author's name<br><b>'time'</b> returns the current time<br><b>'github'</b> returns author's github profile<br><b>'clear'</b> clears the Terminal";
+                answer.innerHTML =  "<b>'author'</b> returns author's name<br><b>'time'</b> returns the current time<br>"+
+                                    "<b>'github'</b> returns author's github profile<br><b>'clear'</b> clears the Terminal";
                 answer.style.color = "green";
                 break;
             case 'author':
