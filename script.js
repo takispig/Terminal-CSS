@@ -24,6 +24,7 @@ function executeCommand(command) {
                 break;
             case 'clear':
                 clear();
+                document.getElementById("input-").focus();
                 exit(); // exit, otherwise a newline will be created (avoid 2 inputs)
             default:
                 answer.innerHTML = "Unknown command. I am just a dummy box :)"
@@ -41,5 +42,5 @@ function executeCommand(command) {
 }
 
 function clear() {
-    document.querySelector(".terminal").innerHTML = '<div class="terminal-toolbar"><div class="icons"><div class="x"></div><div class="minimize"></div><div class="resize"></div></div></div><div class="body"><div class="help">Type \'help\' to check commands</div><div class="terminal-input"><p>></p><input type="text" name="command" onkeydown="executeCommand(this.value)"/></div></div>';
+    document.querySelector(".terminal").innerHTML = '<div class="terminal-toolbar"><div class="icons"><div class="x"></div><div class="minimize"></div><div class="resize"></div></div></div><div class="body"><div class="help">Type \'help\' to check commands</div><div class="terminal-input"><p>></p><input type="text" name="command" id="input-" onkeydown="executeCommand(this.value)"/></div></div>';
 }

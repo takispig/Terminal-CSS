@@ -78,7 +78,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow: auto;
-    text-align:justify;
+    text-align: justify;
 }
 
 .terminal-input {
